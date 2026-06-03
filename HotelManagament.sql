@@ -1,0 +1,717 @@
+CREATE DATABASE Hotel_ManagementSystem; 
+
+USE Hotel_ManagementSystem;
+
+CREATE TABLE Guests (
+	GuestID INT PRIMARY KEY,
+	FirstName VARCHAR(50),
+	LastName VARCHAR(50),
+	Gender VARCHAR(10),
+	PhoneNumber VARCHAR(20),
+	Email VARCHAR(50),
+	Address VARCHAR(100),
+	Nationality VARCHAR(50)
+	);
+
+INSERT INTO Guests (GuestID, FirstName, LastName, Gender, PhoneNumber, Email, Address, Nationality)
+VALUES 
+	(1, 'John', 'Smith', 'Male', '08031234567', 'johnsmith1@gmail.com', '12 Allen Avenue Lagos', 'Nigerian'),
+	(2, 'Mary', 'Johnson', 'Female', '08032345678', 'maryjohnson2@gmail.com', '45 Admiralty Way Lekki', 'Nigerian'),
+	(3, 'David', 'Brown', 'Male', '08033456789', 'davidbrown3@gmail.com', '22 GRA Port Harcourt', 'Nigerian'),
+	(4, 'Sarah', 'Wilson', 'Female', '08034567890', 'sarahwilson4@gmail.com', '18 Wuse Zone 4 Abuja', 'Nigerian'),
+	(5, 'Michael', 'Davis', 'Male', '08035678901', 'michaeldavis5@gmail.com', '10 Ring Road Ibadan', 'Nigerian'),
+	(6, 'Linda', 'Miller', 'Female', '08036789012', 'lindamiller6@gmail.com', '5 Ikot Ekpene Road Uyo', 'Nigerian'),
+	(7, 'James', 'Taylor', 'Male', '08037890123', 'jamestaylor7@gmail.com', '60 Aba Road PH', 'Nigerian'),
+	(8, 'Patricia', 'Anderson', 'Female', '08038901234', 'patriciaanderson8@gmail.com', '11 Bodija Ibadan', 'Nigerian'),
+	(9, 'Robert', 'Thomas', 'Male', '08039012345', 'robertthomas9@gmail.com', '9 Awolowo Road Ikeja', 'Nigerian'),
+	(10, 'Jennifer', 'Jackson', 'Female', '08030123456', 'jenniferjackson10@gmail.com', '17 Oniru Victoria Island', 'Nigerian'),
+	(11, 'Daniel', 'White', 'Male', '08131234567', 'danielwhite11@gmail.com', '13 Sapele Road Benin', 'Nigerian'),
+	(12, 'Nancy', 'Harris', 'Female', '08132345678', 'nancyharris12@gmail.com', '8 Independence Layout Enugu', 'Nigerian'),
+	(13, 'Christopher', 'Martin', 'Male', '08133456789', 'christophermartin13@gmail.com', '25 Garki Abuja', 'Nigerian'),
+	(14, 'Lisa', 'Thompson', 'Female', '08134567890', 'lisathompson14@gmail.com', '32 Ikoyi Lagos', 'Nigerian'),
+	(15, 'Anthony', 'Garcia', 'Male', '08135678901', 'anthonygarcia15@gmail.com', '50 Douglas Road Owerri', 'Nigerian'),
+	(16, 'Karen', 'Martinez', 'Female', '08136789012', 'karenmartinez16@gmail.com', '4 Stadium Road Kano', 'Nigerian'),
+	(17, 'Mark', 'Robinson', 'Male', '08137890123', 'markrobinson17@gmail.com', '70 New Haven Enugu', 'Nigerian'),
+	(18, 'Betty', 'Clark', 'Female', '08138901234', 'bettyclark18@gmail.com', '16 Tanke Ilorin', 'Nigerian'),
+	(19, 'Paul', 'Rodriguez', 'Male', '08139012345', 'paulrodriguez19@gmail.com', '41 Ahmadu Bello Way Kaduna', 'Nigerian'),
+	(20, 'Susan', 'Lewis', 'Female', '08130123456', 'susanlewis20@gmail.com', '12 IBB Boulevard Uyo', 'Nigerian'),
+	(21, 'Steven', 'Lee', 'Male', '07031234567', 'stevenlee21@gmail.com', '8 Marian Calabar', 'Nigerian'),
+	(22, 'Jessica', 'Walker', 'Female', '07032345678', 'jessicawalker22@gmail.com', '22 Rumuola Port Harcourt', 'Nigerian'),
+	(23, 'Kevin', 'Hall', 'Male', '07033456789', 'kevinhall23@gmail.com', '15 Ojota Lagos', 'Nigerian'),
+	(24, 'Ashley', 'Allen', 'Female', '07034567890', 'ashleyallen24@gmail.com', '66 Yaba Lagos', 'Nigerian'),
+	(25, 'Brian', 'Young', 'Male', '07035678901', 'brianyoung25@gmail.com', '91 Trans Ekulu Enugu', 'Nigerian'),
+	(26, 'Donna', 'King', 'Female', '07036789012', 'donnaking26@gmail.com', '14 Agodi Ibadan', 'Nigerian'),
+	(27, 'Edward', 'Wright', 'Male', '07037890123', 'edwardwright27@gmail.com', '3 Gwarinpa Abuja', 'Nigerian'),
+	(28, 'Emily', 'Scott', 'Female', '07038901234', 'emilyscott28@gmail.com', '44 Ademola Adetokunbo Abuja', 'Nigerian'),
+	(29, 'George', 'Green', 'Male', '07039012345', 'georgegreen29@gmail.com', '77 Chevron Lekki', 'Nigerian'),
+	(30, 'Helen', 'Baker', 'Female', '07030123456', 'helenbaker30@gmail.com', '31 Woji PH', 'Nigerian'),
+	(31, 'Joshua', 'Adams', 'Male', '09031234567', 'joshuaadams31@gmail.com', '12 Festac Lagos', 'Nigerian'),
+	(32, 'Amy', 'Nelson', 'Female', '09032345678', 'amynelson32@gmail.com', '5 Ungwan Rimi Kaduna', 'Nigerian'),
+	(33, 'Andrew', 'Carter', 'Male', '09033456789', 'andrewcarter33@gmail.com', '27 Surulere Lagos', 'Nigerian'),
+	(34, 'Angela', 'Mitchell', 'Female', '09034567890', 'angelamitchell34@gmail.com', '48 D-Line PH', 'Nigerian'),
+	(35, 'Kenneth', 'Perez', 'Male', '09035678901', 'kennethperez35@gmail.com', '20 Apo Abuja', 'Nigerian'),
+	(36, 'Rebecca', 'Roberts', 'Female', '09036789012', 'rebeccaroberts36@gmail.com', '18 Asokoro Abuja', 'Nigerian'),
+	(37, 'Thomas', 'Turner', 'Male', '09037890123', 'thomasturner37@gmail.com', '62 Barnawa Kaduna', 'Nigerian'),
+	(38, 'Laura', 'Phillips', 'Female', '09038901234', 'lauraphillips38@gmail.com', '11 Challenge Ibadan', 'Nigerian'),
+	(39, 'Jason', 'Campbell', 'Male', '09039012345', 'jasoncampbell39@gmail.com', '35 Gbagada Lagos', 'Nigerian'),
+	(40, 'Michelle', 'Parker', 'Female', '09030123456', 'michelleparker40@gmail.com', '9 Elekahia PH', 'Nigerian'),
+	(41, 'Ryan', 'Evans', 'Male', '09131234567', 'ryanevans41@gmail.com', '17 Kubwa Abuja', 'Nigerian'),
+	(42, 'Stephanie', 'Edwards', 'Female', '09132345678', 'stephanieedwards42@gmail.com', '6 Allen Ikeja', 'Nigerian'),
+	(43, 'Jacob', 'Collins', 'Male', '09133456789', 'jacobcollins43@gmail.com', '80 Akpakpava Benin', 'Nigerian'),
+	(44, 'Sharon', 'Stewart', 'Female', '09134567890', 'sharonstewart44@gmail.com', '24 Agbara Lagos', 'Nigerian'),
+	(45, 'Gary', 'Sanchez', 'Male', '09135678901', 'garysanchez45@gmail.com', '14 Olu Obasanjo PH', 'Nigerian'),
+	(46, 'Cynthia', 'Morris', 'Female', '09136789012', 'cynthiamorris46@gmail.com', '3 Airport Road Kano', 'Nigerian'),
+	(47, 'Nicholas', 'Rogers', 'Male', '09137890123', 'nicholasrogers47@gmail.com', '29 Ewet Housing Uyo', 'Nigerian'),
+	(48, 'Deborah', 'Reed', 'Female', '09138901234', 'deborahreed48@gmail.com', '15 Aba Owerri Road', 'Nigerian'),
+	(49, 'Eric', 'Cook', 'Male', '09139012345', 'ericcook49@gmail.com', '7 Sango Ibadan', 'Nigerian'),
+	(50, 'Rachel', 'Morgan', 'Female', '09130123456', 'rachelmorgan50@gmail.com', '51 Admiralty Lekki', 'Nigerian');
+
+
+CREATE TABLE Room_Types (
+	RoomTypeID INT PRIMARY KEY,
+	TypeName VARCHAR(50),
+	PricePerNight DECIMAL(10,2),
+	MaxOccupancy INT
+	);
+
+INSERT INTO Room_Types (RoomTypeID, TypeName, PricePerNight, MaxOccupancy)
+VALUES
+	(1, 'Single Room', 25000.00, 1),
+	(2, 'Double Room', 40000.00, 2),
+	(3, 'Deluxe Room', 55000.00, 2),
+	(4, 'Executive Room', 70000.00, 2),
+	(5, 'Family Room', 85000.00, 4),
+	(6, 'Presidential Suite', 250000.00, 5);
+
+
+CREATE TABLE Rooms (
+	RoomID INT PRIMARY KEY,
+	RoomNumber INT,
+	RoomTypeID INT,
+	FloorNumber INT,
+	Status VARCHAR(50),
+	FOREIGN KEY (RoomTypeID) REFERENCES Room_Types(RoomTypeID)
+	);
+
+INSERT INTO Rooms (RoomID, RoomNumber, RoomTypeID, FloorNumber, Status)
+VALUES 
+	(1, '101', 1, 1, 'Available'),
+	(2, '102', 2, 2, 'Occupied'),
+	(3, '103', 3, 3, 'Maintenance'),
+	(4, '104', 4, 4, 'Available'),
+	(5, '105', 5, 5, 'Occupied'),
+	(6, '106', 6, 6, 'Maintenance'),
+	(7, '107', 1, 7, 'Available'),
+	(8, '108', 2, 8, 'Occupied'),
+	(9, '109', 3, 9, 'Maintenance'),
+	(10, '110', 4, 10, 'Available'),
+	(11, '111', 5, 1, 'Occupied'),
+	(12, '112', 6, 2, 'Maintenance'),
+	(13, '113', 1, 3, 'Available'),
+	(14, '114', 2, 4, 'Occupied'),
+	(15, '115', 3, 5, 'Maintenance'),
+	(16, '116', 4, 6, 'Available'),
+	(17, '117', 5, 7, 'Occupied'),
+	(18, '118', 6, 8, 'Maintenance'),
+	(19, '119', 1, 9, 'Available'),
+	(20, '120', 2, 10, 'Occupied'),
+	(21, '121', 3, 1, 'Maintenance'),
+	(22, '122', 4, 2, 'Available'),
+	(23, '123', 5, 3, 'Occupied'),
+	(24, '124', 6, 4, 'Maintenance'),
+	(25, '125', 1, 5, 'Available'),
+	(26, '126', 2, 6, 'Occupied'),
+	(27, '127', 3, 7, 'Maintenance'),
+	(28, '128', 4, 8, 'Available'),
+	(29, '129', 5, 9, 'Occupied'),
+	(30, '130', 6, 10, 'Maintenance'),
+	(31, '131', 1, 1, 'Available'),
+	(32, '132', 2, 2, 'Occupied'),
+	(33, '133', 3, 3, 'Maintenance'),
+	(34, '134', 4, 4, 'Available'),
+	(35, '135', 5, 5, 'Occupied'),
+	(36, '136', 6, 6, 'Maintenance'),
+	(37, '137', 1, 7, 'Available'),
+	(38, '138', 2, 8, 'Occupied'),
+	(39, '139', 3, 9, 'Maintenance'),
+	(40, '140', 4, 10, 'Available'),
+	(41, '141', 5, 1, 'Occupied'),
+	(42, '142', 6, 2, 'Maintenance'),
+	(43, '143', 1, 3, 'Available'),
+	(44, '144', 2, 4, 'Occupied'),
+	(45, '145', 3, 5, 'Maintenance'),
+	(46, '146', 4, 6, 'Available'),
+	(47, '147', 5, 7, 'Occupied'),
+	(48, '148', 6, 8, 'Maintenance'),
+	(49, '149', 1, 9, 'Available'),
+	(50, '150', 2, 10, 'Occupied'),
+	(51, '151', 3, 1, 'Maintenance'),
+	(52, '152', 4, 2, 'Available'),
+	(53, '153', 5, 3, 'Occupied'),
+	(54, '154', 6, 4, 'Maintenance'),
+	(55, '155', 1, 5, 'Available'),
+	(56, '156', 2, 6, 'Occupied'),
+	(57, '157', 3, 7, 'Maintenance'),
+	(58, '158', 4, 8, 'Available'),
+	(59, '159', 5, 9, 'Occupied'),
+	(60, '160', 6, 10, 'Maintenance'),
+	(61, '161', 1, 1, 'Available'),
+	(62, '162', 2, 2, 'Occupied'),
+	(63, '163', 3, 3, 'Maintenance'),
+	(64, '164', 4, 4, 'Available'),
+	(65, '165', 5, 5, 'Occupied'),
+	(66, '166', 6, 6, 'Maintenance'),
+	(67, '167', 1, 7, 'Available'),
+	(68, '168', 2, 8, 'Occupied'),
+	(69, '169', 3, 9, 'Maintenance'),
+	(70, '170', 4, 10, 'Available'),
+	(71, '171', 5, 1, 'Occupied'),
+	(72, '172', 6, 2, 'Maintenance'),
+	(73, '173', 1, 3, 'Available'),
+	(74, '174', 2, 4, 'Occupied'),
+	(75, '175', 3, 5, 'Maintenance'),
+	(76, '176', 4, 6, 'Available'),
+	(77, '177', 5, 7, 'Occupied'),
+	(78, '178', 6, 8, 'Maintenance'),
+	(79, '179', 1, 9, 'Available'),
+	(80, '180', 2, 10, 'Occupied'),
+	(81, '181', 3, 1, 'Maintenance'),
+	(82, '182', 4, 2, 'Available'),
+	(83, '183', 5, 3, 'Occupied'),
+	(84, '184', 6, 4, 'Maintenance'),
+	(85, '185', 1, 5, 'Available'),
+	(86, '186', 2, 6, 'Occupied'),
+	(87, '187', 3, 7, 'Maintenance'),
+	(88, '188', 4, 8, 'Available'),
+	(89, '189', 5, 9, 'Occupied'),
+	(90, '190', 6, 10, 'Maintenance'),
+	(91, '191', 1, 1, 'Available'),
+	(92, '192', 2, 2, 'Occupied'),
+	(93, '193', 3, 3, 'Maintenance'),
+	(94, '194', 4, 4, 'Available'),
+	(95, '195', 5, 5, 'Occupied'),
+	(96, '196', 6, 6, 'Maintenance'),
+	(97, '197', 1, 7, 'Available'),
+	(98, '198', 2, 8, 'Occupied'),
+	(99, '199', 3, 9, 'Maintenance'),
+	(100, '200', 4, 10, 'Available');
+
+
+CREATE TABLE Bookings (
+	BookingID INT PRIMARY KEY,
+	GuestID INT,
+	RoomID INT,
+	CheckInDate DATE,
+	CheckOutDate DATE,
+	BookingDate DATE,
+	BookingStatus VARCHAR(20),
+	FOREIGN KEY (GuestID) REFERENCES Guests(GuestID),
+	FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID)
+	);
+
+INSERT INTO Bookings (BookingID, GuestID, RoomID, CheckInDate, CheckOutDate, BookingDate, BookingStatus)
+VALUES 
+	(1, 1, 5, '2026-06-01', '2026-06-05', '2026-05-20', 'Confirmed'),
+	(2, 1, 12, '2026-07-10', '2026-07-14', '2026-06-25', 'Confirmed'),
+	(3, 1, 20, '2026-08-01', '2026-08-05', '2026-07-10', 'Cancelled'),
+	(4, 1, 33, '2026-09-01', '2026-09-04', '2026-08-10', 'Confirmed'),
+	(5, 2, 8, '2026-06-03', '2026-06-06', '2026-05-21', 'Confirmed'),
+	(6, 2, 15, '2026-07-15', '2026-07-18', '2026-06-20', 'Pending'),
+	(7, 3, 18, '2026-06-05', '2026-06-08', '2026-05-22', 'Cancelled'),
+	(8, 4, 22, '2026-06-07', '2026-06-10', '2026-05-23', 'Confirmed'),
+	(9, 4, 30, '2026-08-12', '2026-08-15', '2026-07-20', 'Confirmed'),
+	(10, 5, 40, '2026-06-08', '2026-06-12', '2026-05-24', 'Confirmed'),
+	(11, 5, 41, '2026-07-08', '2026-07-12', '2026-06-22', 'Cancelled'),
+	(12, 6, 6, '2026-06-10', '2026-06-14', '2026-05-25', 'Confirmed'),
+	(13, 6, 7, '2026-07-01', '2026-07-05', '2026-06-10', 'Confirmed'),
+	(14, 7, 9, '2026-06-11', '2026-06-15', '2026-05-26', 'Cancelled'),
+	(15, 8, 10, '2026-06-12', '2026-06-16', '2026-05-26', 'Confirmed'),
+	(16, 9, 11, '2026-06-13', '2026-06-17', '2026-05-27', 'Pending'),
+	(17, 9, 25, '2026-07-10', '2026-07-14', '2026-06-15', 'Confirmed'),
+	(18, 10, 26, '2026-06-14', '2026-06-18', '2026-05-27', 'Confirmed'),
+	(19, 11, 27, '2026-06-15', '2026-06-19', '2026-05-28', 'Confirmed'),
+	(20, 12, 28, '2026-06-16', '2026-06-20', '2026-05-28', 'Cancelled'),
+	(21, 13, 29, '2026-06-17', '2026-06-21', '2026-05-29', 'Confirmed'),
+	(22, 14, 31, '2026-06-18', '2026-06-22', '2026-05-29', 'Pending'),
+	(23, 15, 32, '2026-06-19', '2026-06-23', '2026-05-30', 'Confirmed'),
+	(24, 16, 34, '2026-06-20', '2026-06-24', '2026-05-30', 'Confirmed'),
+	(25, 17, 35, '2026-06-21', '2026-06-25', '2026-05-31', 'Cancelled'),
+	(26, 18, 36, '2026-06-22', '2026-06-26', '2026-05-31', 'Confirmed'),
+	(27, 19, 37, '2026-06-23', '2026-06-27', '2026-06-01', 'Pending'),
+	(28, 20, 38, '2026-06-24', '2026-06-28', '2026-06-01', 'Confirmed'),
+	(29, 21, 39, '2026-06-25', '2026-06-29', '2026-06-02', 'Confirmed'),
+	(30, 22, 42, '2026-06-26', '2026-06-30', '2026-06-02', 'Cancelled'),
+	(31, 23, 43, '2026-06-27', '2026-07-01', '2026-06-03', 'Confirmed'),
+	(32, 24, 44, '2026-06-28', '2026-07-02', '2026-06-03', 'Pending'),
+	(33, 25, 45, '2026-06-29', '2026-07-03', '2026-06-04', 'Confirmed'),
+	(34, 26, 46, '2026-06-30', '2026-07-04', '2026-06-04', 'Confirmed'),
+	(35, 27, 47, '2026-07-01', '2026-07-05', '2026-06-05', 'Cancelled'),
+	(36, 28, 48, '2026-07-02', '2026-07-06', '2026-06-05', 'Confirmed'),
+	(37, 29, 49, '2026-07-03', '2026-07-07', '2026-06-06', 'Pending'),
+	(38, 30, 50, '2026-07-04', '2026-07-08', '2026-06-06', 'Confirmed'),
+	(39, 31, 51, '2026-07-05', '2026-07-09', '2026-06-07', 'Confirmed'),
+	(40, 32, 52, '2026-07-06', '2026-07-10', '2026-06-07', 'Cancelled'),
+	(41, 33, 53, '2026-07-07', '2026-07-11', '2026-06-08', 'Confirmed'),
+	(42, 34, 54, '2026-07-08', '2026-07-12', '2026-06-08', 'Pending'),
+	(43, 35, 55, '2026-07-09', '2026-07-13', '2026-06-09', 'Confirmed'),
+	(44, 36, 56, '2026-07-10', '2026-07-14', '2026-06-09', 'Confirmed'),
+	(45, 37, 57, '2026-07-11', '2026-07-15', '2026-06-10', 'Cancelled'),
+	(46, 38, 58, '2026-07-12', '2026-07-16', '2026-06-10', 'Confirmed'),
+	(47, 39, 59, '2026-07-13', '2026-07-17', '2026-06-11', 'Pending'),
+	(48, 40, 60, '2026-07-14', '2026-07-18', '2026-06-11', 'Confirmed'),
+	(49, 41, 61, '2026-07-15', '2026-07-19', '2026-06-12', 'Confirmed'),
+	(50, 42, 62, '2026-07-16', '2026-07-20', '2026-06-12', 'Cancelled');
+
+
+CREATE TABLE Services (
+	ServiceID INT PRIMARY KEY,
+	ServiceName VARCHAR(50),
+	ServicePrice DECIMAL(10,2)
+); 
+
+INSERT INTO Services (ServiceID, ServiceName, ServicePrice)
+VALUES
+	(1, 'Room Service', 5000.00),
+	(2, 'Laundry Service', 3000.00),
+	(3, 'Spa Massage', 20000.00),
+	(4, 'Gym Access', 5000.00),
+	(5, 'Airport Pickup', 15000.00),
+	(6, 'Breakfast Buffet', 8000.00),
+	(7, 'Dinner Service', 12000.00),
+	(8, 'Swimming Pool Access', 4000.00),
+	(9, 'Mini Bar', 7000.00),
+	(10, 'Conference Room Booking', 25000.00);
+
+
+CREATE TABLE Service_Usage (
+	ServiceUsageID INT PRIMARY KEY,
+	BookingID INT,
+	ServiceID INT,
+	UsageDate DATE,
+	Quantity INT,
+	TotalCost DECIMAL(10,2),
+	FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID),
+	FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID)
+);
+		
+DELETE FROM Bookings;
+DELETE FROM Rooms;
+
+INSERT INTO Rooms (RoomID, RoomNumber, RoomTypeID, FloorNumber, Status)
+VALUES
+	(1,101,1,1,'Available'),
+	(2,102,1,1,'Available'),
+	(3,103,2,1,'Occupied'),
+	(4,104,2,1,'Available'),
+	(5,105,3,1,'Occupied'),
+	(6,106,3,1,'Available'),
+	(7,107,4,1,'Available'),
+	(8,108,4,1,'Under Maintenance'),
+	(9,109,5,1,'Available'),
+	(10,110,6,1,'Occupied'),
+	(11,201,1,2,'Available'),
+	(12,202,1,2,'Occupied'),
+	(13,203,2,2,'Available'),
+	(14,204,2,2,'Available'),
+	(15,205,3,2,'Occupied'),
+	(16,206,3,2,'Available'),
+	(17,207,4,2,'Available'),
+	(18,208,4,2,'Under Maintenance'),
+	(19,209,5,2,'Available'),
+	(20,210,6,2,'Available'),
+	(21,301,1,3,'Available'),
+	(22,302,1,3,'Occupied'),
+	(23,303,2,3,'Available'),
+	(24,304,2,3,'Available'),
+	(25,305,3,3,'Occupied'),
+	(26,306,3,3,'Available'),
+	(27,307,4,3,'Available'),
+	(28,308,4,3,'Available'),
+	(29,309,5,3,'Occupied'),
+	(30,310,6,3,'Available'),
+	(31,401,1,4,'Available'),
+	(32,402,1,4,'Available'),
+	(33,403,2,4,'Occupied'),
+	(34,404,2,4,'Available'),
+	(35,405,3,4,'Occupied'),
+	(36,406,3,4,'Available'),
+	(37,407,4,4,'Available'),
+	(38,408,4,4,'Under Maintenance'),
+	(39,409,5,4,'Available'),
+	(40,410,6,4,'Occupied'),
+	(41,501,1,5,'Available'),
+	(42,502,1,5,'Occupied'),
+	(43,503,2,5,'Available'),
+	(44,504,2,5,'Available'),
+	(45,505,3,5,'Occupied'),
+	(46,506,3,5,'Available'),
+	(47,507,4,5,'Available'),
+	(48,508,4,5,'Available'),
+	(49,509,5,5,'Occupied'),
+	(50,510,6,5,'Available'),
+	(51,601,1,6,'Available'),
+	(52,602,1,6,'Available'),
+	(53,603,2,6,'Occupied'),
+	(54,604,2,6,'Available'),
+	(55,605,3,6,'Available'),
+	(56,606,3,6,'Available'),
+	(57,607,4,6,'Occupied'),
+	(58,608,4,6,'Available'),
+	(59,609,5,6,'Available'),
+	(60,610,6,6,'Under Maintenance'),
+	(61,701,1,7,'Available'),
+	(62,702,1,7,'Occupied'),
+	(63,703,2,7,'Available'),
+	(64,704,2,7,'Available'),
+	(65,705,3,7,'Occupied'),
+	(66,706,3,7,'Available'),
+	(67,707,4,7,'Available'),
+	(68,708,4,7,'Available'),
+	(69,709,5,7,'Available'),
+	(70,710,6,7,'Occupied'),
+	(71,801,1,8,'Available'),
+	(72,802,1,8,'Available'),
+	(73,803,2,8,'Occupied'),
+	(74,804,2,8,'Available'),
+	(75,805,3,8,'Available'),
+	(76,806,3,8,'Available'),
+	(77,807,4,8,'Occupied'),
+	(78,808,4,8,'Available'),
+	(79,809,5,8,'Under Maintenance'),
+	(80,810,6,8,'Available'),
+	(81,901,1,9,'Available'),
+	(82,902,1,9,'Occupied'),
+	(83,903,2,9,'Available'),
+	(84,904,2,9,'Available'),
+	(85,905,3,9,'Occupied'),
+	(86,906,3,9,'Available'),
+	(87,907,4,9,'Available'),
+	(88,908,4,9,'Occupied'),
+	(89,909,5,9,'Available'),
+	(90,910,6,9,'Available'),
+	(91,1001,1,10,'Available'),
+	(92,1002,1,10,'Available'),
+	(93,1003,2,10,'Occupied'),
+	(94,1004,2,10,'Available'),
+	(95,1005,3,10,'Available'),
+	(96,1006,3,10,'Available'),
+	(97,1007,4,10,'Occupied'),
+	(98,1008,4,10,'Available'),
+	(99,1009,5,10,'Under Maintenance'),
+	(100,1010,6,10,'Available');
+
+INSERT INTO Bookings (BookingID, GuestID, RoomID, CheckInDate, CheckOutDate, BookingDate, BookingStatus)
+VALUES
+	(1,1,5,'2026-01-10','2026-01-14','2025-12-20','Completed'),
+	(2,1,12,'2026-02-15','2026-02-18','2026-01-25','Completed'),
+	(3,1,20,'2026-03-01','2026-03-05','2026-02-10','Cancelled'),
+	(4,1,33,'2026-04-01','2026-04-04','2026-03-10','Completed'),
+	(5,2,8,'2026-01-20','2026-01-23','2026-01-05','Completed'),
+	(6,2,15,'2026-06-15','2026-06-18','2026-05-20','Pending'),
+	(7,3,18,'2026-02-05','2026-02-08','2026-01-15','Cancelled'),
+	(8,4,22,'2026-01-25','2026-01-28','2026-01-10','Completed'),
+	(9,4,30,'2026-05-01','2026-05-05','2026-04-10','Completed'),
+	(10,5,40,'2026-02-08','2026-02-12','2026-01-24','Completed'),
+	(11,5,41,'2026-04-15','2026-04-18','2026-03-20','Cancelled'),
+	(12,6,6,'2026-02-10','2026-02-14','2026-01-25','Completed'),
+	(13,6,7,'2026-05-10','2026-05-14','2026-04-15','Completed'),
+	(14,7,9,'2026-02-20','2026-02-24','2026-02-01','Completed'),
+	(15,8,10,'2026-03-01','2026-03-05','2026-02-10','Completed'),
+	(16,9,11,'2026-06-13','2026-06-17','2026-05-27','Pending'),
+	(17,9,25,'2026-03-15','2026-03-19','2026-02-20','Completed'),
+	(18,10,26,'2026-03-20','2026-03-24','2026-03-01','Completed'),
+	(19,11,27,'2026-03-25','2026-03-29','2026-03-05','Completed'),
+	(20,12,28,'2026-04-02','2026-04-06','2026-03-15','Cancelled'),
+	(21,13,29,'2026-04-05','2026-04-09','2026-03-20','Completed'),
+	(22,14,31,'2026-07-18','2026-07-22','2026-06-29','Pending'),
+	(23,15,32,'2026-04-10','2026-04-14','2026-03-25','Completed'),
+	(24,16,34,'2026-04-15','2026-04-19','2026-03-30','Completed'),
+	(25,17,35,'2026-08-21','2026-08-25','2026-07-31','Pending'),
+	(26,18,36,'2026-04-20','2026-04-24','2026-04-01','Completed'),
+	(27,19,37,'2026-04-22','2026-04-26','2026-04-05','Completed'),
+	(28,20,38,'2026-04-24','2026-04-28','2026-04-08','Completed'),
+	(29,21,39,'2026-09-25','2026-09-29','2026-08-20','Pending'),
+	(30,22,42,'2026-04-28','2026-05-02','2026-04-10','Cancelled'),
+	(31,23,43,'2026-05-01','2026-05-05','2026-04-15','Completed'),
+	(32,24,44,'2026-06-28','2026-07-02','2026-06-03','Pending'),
+	(33,25,45,'2026-05-03','2026-05-07','2026-04-18','Completed'),
+	(34,26,46,'2026-05-04','2026-05-08','2026-04-19','Completed'),
+	(35,27,47,'2026-10-01','2026-10-05','2026-09-01','Pending'),
+	(36,28,48,'2026-10-02','2026-10-06','2026-09-02','Pending'),
+	(37,29,49,'2026-10-03','2026-10-07','2026-09-03','Pending'),
+	(38,30,50,'2026-10-04','2026-10-08','2026-09-04','Pending'),
+	(39,31,51,'2026-10-05','2026-10-09','2026-09-05','Pending'),
+	(40,32,52,'2026-10-06','2026-10-10','2026-09-06','Pending'),
+	(41,33,53,'2026-10-07','2026-10-11','2026-09-07','Pending'),
+	(42,34,54,'2026-11-08','2026-11-12','2026-10-08','Pending'),
+	(43,35,55,'2026-05-08','2026-05-12','2026-04-20','Completed'),
+	(44,36,56,'2026-05-10','2026-05-14','2026-04-22','Completed'),
+	(45,37,57,'2026-05-12','2026-05-16','2026-04-24','Completed'),
+	(46,38,58,'2026-05-14','2026-05-18','2026-04-25','Completed'),
+	(47,39,59,'2026-05-16','2026-05-20','2026-04-27','Completed'),
+	(48,40,60,'2026-05-18','2026-05-22','2026-04-28','Completed'),
+	(49,41,61,'2026-05-20','2026-05-24','2026-04-30','Completed'),
+	(50,42,62,'2026-05-21','2026-05-25','2026-05-01','Completed');
+
+INSERT INTO Service_Usage (ServiceUsageID, BookingID, ServiceID, UsageDate, Quantity, TotalCost)
+VALUES
+	(1,1,6,'2026-01-11',2,16000),
+	(2,1,2,'2026-01-12',1,3000),
+	(3,2,1,'2026-02-16',1,5000),
+	(4,2,9,'2026-02-17',2,14000),
+	(5,4,3,'2026-04-02',1,20000),
+	(6,4,6,'2026-04-03',2,16000),
+	(7,5,4,'2026-01-21',2,10000),
+	(8,8,8,'2026-01-26',3,12000),
+	(9,9,1,'2026-05-02',2,10000),
+	(10,9,7,'2026-05-03',1,12000),
+	(11,10,6,'2026-02-09',2,16000),
+	(12,12,2,'2026-02-11',3,9000),
+	(13,13,7,'2026-05-11',2,24000),
+	(14,14,4,'2026-02-21',2,10000),
+	(15,15,1,'2026-03-02',1,5000),
+	(16,17,9,'2026-03-16',2,14000),
+	(17,17,6,'2026-03-17',1,8000),
+	(18,18,4,'2026-03-21',2,10000),
+	(19,19,5,'2026-03-26',1,15000),
+	(20,21,10,'2026-04-06',1,25000),
+	(21,23,1,'2026-04-11',2,10000),
+	(22,24,2,'2026-04-16',1,3000),
+	(23,26,6,'2026-04-21',3,24000),
+	(24,27,8,'2026-04-23',2,8000),
+	(25,28,1,'2026-04-25',1,5000),
+	(26,31,7,'2026-05-02',2,24000),
+	(27,33,6,'2026-05-04',2,16000),
+	(28,34,2,'2026-05-05',2,6000),
+	(29,43,3,'2026-05-09',1,20000),
+	(30,44,8,'2026-05-11',3,12000),
+	(31,45,1,'2026-05-13',2,10000),
+	(32,46,9,'2026-05-15',1,7000),
+	(33,47,7,'2026-05-17',2,24000),
+	(34,48,5,'2026-05-19',1,15000),
+	(35,49,6,'2026-05-21',2,16000),
+	(36,50,3,'2026-05-22',1,20000);
+
+
+CREATE TABLE Invoices (
+	InvoiceID INT PRIMARY KEY,
+	BookingID INT UNIQUE,
+	InvoiceDate DATE,
+	TotalAmount DECIMAL(10,2),
+	InvoiceStatus VARCHAR(50),
+	FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
+);
+
+INSERT INTO Invoices (InvoiceID, BookingID, InvoiceDate, TotalAmount, InvoiceStatus)
+VALUES
+	(1,1,'2026-01-14',65000,'Paid'),
+	(2,2,'2026-02-18',85000,'Paid'),
+	(3,4,'2026-04-04',120000,'Paid'),
+	(4,5,'2026-01-23',55000,'Paid'),
+	(5,8,'2026-01-28',48000,'Paid'),
+	(6,9,'2026-05-05',95000,'Paid'),
+	(7,10,'2026-02-12',70000,'Paid'),
+	(8,12,'2026-02-14',60000,'Paid'),
+	(9,13,'2026-05-14',110000,'Paid'),
+	(10,14,'2026-02-24',65000,'Paid'),
+	(11,15,'2026-03-05',45000,'Paid'),
+	(12,17,'2026-03-19',90000,'Paid'),
+	(13,18,'2026-03-24',72000,'Paid'),
+	(14,19,'2026-03-29',80000,'Paid'),
+	(15,21,'2026-04-09',130000,'Paid'),
+	(16,23,'2026-04-14',68000,'Paid'),
+	(17,24,'2026-04-19',52000,'Paid'),
+	(18,26,'2026-04-24',125000,'Paid'),
+	(19,27,'2026-04-26',70000,'Paid'),
+	(20,28,'2026-04-28',60000,'Paid'),
+	(21,31,'2026-05-05',115000,'Paid'),
+	(22,33,'2026-05-07',98000,'Paid'),
+	(23,34,'2026-05-08',54000,'Paid'),
+	(24,43,'2026-05-12',150000,'Paid'),
+	(25,44,'2026-05-14',76000,'Paid'),
+	(26,45,'2026-05-16',82000,'Paid'),
+	(27,46,'2026-05-18',92000,'Paid'),
+	(28,47,'2026-05-20',140000,'Paid'),
+	(29,48,'2026-05-22',105000,'Paid'),
+	(30,49,'2026-05-24',88000,'Paid'),
+	(31,50,'2026-05-25',95000,'Paid');
+
+
+CREATE TABLE Payments (
+	PaymentID INT PRIMARY KEY,
+	InvoiceID INT,
+	PaymentDate DATE,
+	AmountPaid DECIMAL(10,2),
+	PaymentMethod VARCHAR(20)
+	FOREIGN KEY (InvoiceID) REFERENCES Invoices(InvoiceID)
+);
+
+INSERT INTO Payments (PaymentID, InvoiceID, PaymentDate, PaymentMethod, AmountPaid)
+VALUES
+	(1,1,'2026-01-14','Card',65000),
+	(2,2,'2026-02-18','Bank Transfer',85000),
+	(3,3,'2026-04-04','Card',120000),
+	(4,4,'2026-01-23','Cash',55000),
+	(5,5,'2026-01-28','Card',48000),
+	(6,6,'2026-05-05','Bank Transfer',95000),
+	(7,7,'2026-02-12','Card',70000),
+	(8,8,'2026-02-14','Cash',60000),
+	(9,9,'2026-05-14','Card',110000),
+	(10,10,'2026-02-24','Bank Transfer',65000),
+	(11,11,'2026-03-05','Cash',45000),
+	(12,12,'2026-03-19','Card',90000),
+	(13,13,'2026-03-24','Bank Transfer',72000),
+	(14,14,'2026-03-29','Card',80000),
+	(15,15,'2026-04-09','Bank Transfer',130000),
+	(16,16,'2026-04-14','Card',68000),
+	(17,17,'2026-04-19','Cash',52000),
+	(18,18,'2026-04-24','Bank Transfer',125000),
+	(19,19,'2026-04-26','Card',70000),
+	(20,20,'2026-04-28','Cash',60000),
+	(21,21,'2026-05-05','Card',115000),
+	(22,22,'2026-05-07','Cash',98000),
+	(23,23,'2026-05-08','Bank Transfer',54000),
+	(24,24,'2026-05-12','Card',150000),
+	(25,25,'2026-05-14','Cash',76000),
+	(26,26,'2026-05-16','Bank Transfer',82000),
+	(27,27,'2026-05-18','Card',92000),
+	(28,28,'2026-05-20','Bank Transfer',140000),
+	(29,29,'2026-05-22','Card',105000),
+	(30,30,'2026-05-24','Cash',88000),
+	(31,31,'2026-05-25','Card',95000);
+
+--Business Queries 
+
+--Count bookings by category using CASE
+SELECT 
+	SUM(CASE WHEN BookingStatus = 'Completed' THEN 1 ELSE 0 END) AS CompletedBookings,
+	SUM(CASE WHEN BookingStatus = 'Pending' THEN 1 ELSE 0 END) AS PendingBookings,
+	SUM(CASE WHEN BookingStatus = 'Cancelled' THEN 1 ELSE 0 END) AS CancelledBookings
+FROM Bookings;
+
+--Count rooms by status
+SELECT Status, COUNT (*) AS NumberOfRooms
+FROM Rooms
+GROUP BY Status;
+
+--List guests with their bookings
+SELECT Guests.FirstName, Guests.LastName, Bookings.BookingID, Bookings.CheckInDate, Bookings.CheckOutDate
+FROM Bookings
+INNER JOIN Guests ON Bookings.GuestID = Guests.GuestID;
+
+--Total number of bookings per guest
+SELECT Guests.GuestID, Guests.FirstName, Guests.LastName, COUNT (Bookings.BookingID) AS TotalBookings
+FROM Bookings
+LEFT JOIN Guests ON Guests.GuestID = Bookings.GuestID
+GROUP BY Guests.GuestID, Guests.FirstName, Guests.LastName;
+
+--Find repeat guests
+SELECT GuestID, COUNT (*) AS NumberOfBookings
+FROM Bookings
+GROUP BY GuestID
+HAVING COUNT (*) > 1;
+
+--Most popular room type 
+SELECT TOP 1 Room_Types.TypeName, COUNT (*) AS TotalBookings
+FROM Bookings 
+INNER JOIN Rooms ON Bookings.RoomID = Rooms.RoomID
+INNER JOIN Room_Types ON Rooms.RoomTypeID = Room_Types.RoomTypeID
+GROUP BY Room_Types.TypeName
+ORDER BY TotalBookings DESC; 
+
+--Total revenue from invoices
+SELECT SUM (TotalAmount) AS TotalRevenue
+FROM Invoices; 
+
+--Average invoice amount
+SELECT AVG (TotalAmount) AS AverageInvoice 
+FROM Invoices;
+
+--Highest invoice
+SELECT MAX (TotalAmount) AS HighestInvoice
+FROM Invoices;
+
+--Top 5 highest invoices
+SELECT TOP 5 *
+FROM Invoices
+ORDER BY TotalAmount DESC;
+
+--Revenue by month
+SELECT MONTH (InvoiceDate) AS InvoiceMonth, SUM (TotalAmount) AS Revenue
+FROM Invoices 
+GROUP BY MONTH (InvoiceDate)
+ORDER BY InvoiceMonth;
+
+--Revenue by payment method
+SELECT PaymentMethod, SUM (AmountPaid) AS Revenue
+FROM Payments
+GROUP BY PaymentMethod;
+
+--Most used service
+SELECT TOP 1 Services.ServiceName, COUNT (*) AS TimesUsed
+FROM Service_Usage
+INNER JOIN Services ON Service_Usage.ServiceID = Services.ServiceID
+GROUP BY Services.ServiceName
+ORDER BY TimesUsed DESC; 
+
+--Revenue generated by each service
+SELECT Services.ServiceName, SUM (Service_Usage.TotalCost) AS ServiceRevenue 
+FROM Service_Usage
+INNER JOIN Services ON Service_Usage.ServiceID = Services.ServiceID
+GROUP BY Services.ServiceName
+ORDER BY ServiceRevenue DESC; 
+
+--Highest spending guest
+SELECT TOP 1 Guests.GuestID, Guests.FirstName, Guests.LastName, SUM (Invoices.TotalAmount) AS TotalSpent
+FROM Guests 
+INNER JOIN Bookings ON Guests.GuestID = Bookings.GuestID
+INNER JOIN Invoices ON Bookings.BookingID = Invoices.BookingID
+GROUP BY Guests.GuestID, Guests.FirstName, Guests.LastName
+ORDER BY TotalSpent DESC; 
+
+--Occupancy rate by room type 
+SELECT Room_Types.TypeName, COUNT (Bookings.BookingID) AS TotalBookings
+FROM Room_Types
+INNER JOIN Rooms ON Room_Types.RoomTypeID = Rooms.RoomTypeID
+INNER JOIN Bookings ON Rooms.RoomID = Bookings.RoomID
+GROUP BY Room_Types.TypeName
+ORDER BY TotalBookings DESC;
+
+--Guest spending report
+SELECT Guests.GuestID, Guests.FirstName, Guests.LastName, SUM (Invoices.TotalAmount) AS TotalSpent
+FROM Guests
+INNER JOIN Bookings ON Guests.GuestID = Bookings.GuestID
+INNER JOIN Invoices ON Bookings.BookingID = Invoices.BookingID
+GROUP BY Guests.GuestID, Guests.FirstName, Guests.LastName
+ORDER BY TotalSpent DESC; 
+
+--Average length of stay
+SELECT AVG(DATEDIFF(DAY, CheckInDate, CheckOutDate)) AS AverageLengthStay
+FROM Bookings
+WHERE BookingStatus = 'Completed';
+
+--Number of bookings per month
+SELECT MONTH(CheckInDate) AS MonthNumber, COUNT (*) AS NumberOfBookings
+FROM Bookings
+GROUP BY MONTH(CheckInDate)
+ORDER BY MonthNumber;
+
+--Most profitable room type 
+SELECT Room_Types.TypeName, SUM (Invoices.TotalAmount) AS RevenueGenerated
+FROM Room_Types
+INNER JOIN Rooms ON Room_Types.RoomTypeID = Rooms.RoomTypeID
+INNER JOIN Bookings ON Rooms.RoomID = Bookings.RoomID
+INNER JOIN Invoices ON Bookings.BookingID = Invoices.BookingID
+GROUP BY Room_Types.TypeName
+ORDER BY RevenueGenerated DESC;
+
+--Total revenue this year
+SELECT SUM(TotalAmount) AS TotalRevenue
+FROM Invoices;
+
+--Booking cancellation rate
+SELECT 
+(
+	SUM(CASE WHEN BookingStatus = 'Cancelled' THEN 1 ELSE 0 END) * 100.0 / COUNT (*)
+) AS CancellationRate
+FROM Bookings;
